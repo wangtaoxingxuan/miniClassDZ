@@ -1,0 +1,20 @@
+/**app.wxss**/
+
+page {
+  background-color: #efefef;
+  color-white:#ffffff;
+  color-black:#000000;
+  color-07:#070707;
+  color-6e:#6e6e6e;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: PingFangSC-Regular;
+}

@@ -1,0 +1,68 @@
+/* miniprogram/pages/order/detail/eyes/eyes.wxss */
+
+.container {
+  font-family: PingFangSC-Regular;
+}
+
+.item-name {
+  font-size: 48rpx;
+  color: #070707;
+  margin: 10rpx 32rpx 32rpx 32rpx;
+}
+
+.item-time{
+  font-size: 28rpx;
+  color: #6e6e6e;
+  margin: 0 32rpx 22rpx 32rpx;
+}
+
+.tab-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fafafa;
+  width: calc(100%-64rpx);
+  margin: 0 32rpx;
+
+  border-radius: 8rpx;
+  border-width: 2rpx;
+  border-color: #efefef;
+  border-style: solid;
+}
+
+.th-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.table-common {
+  flex: 1;
+  text-align: center;
+  line-height: 96rpx;
+  height: 96rpx;
+}
+
+.table-common2 {
+  flex: 2;
+  text-align: center;
+  line-height: 96rpx;
+  height: 96rpx;
+}
+
+.table-left {
+  border-bottom: 2rpx solid #efefef;
+}
+
+.table-center {
+  border-left: 2rpx solid #efefef;
+  border-right: 2rpx solid #efefef;
+  border-bottom: 2rpx solid #efefef;
+}
+
+.table-right{
+  border-bottom: 2rpx solid #efefef;
+}
+
+.item-empty{
+  height: 150rpx;
+}

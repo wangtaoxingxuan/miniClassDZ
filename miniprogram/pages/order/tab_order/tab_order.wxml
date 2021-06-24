@@ -1,0 +1,21 @@
+<!--miniprogram/pages/order/tab_order/tab_order.wxml-->
+<view class="container">
+  <view wx:if="{{nodata}}">
+    <empty-view txt="暂无数据" empty-container="empty-container">
+    </empty-view>
+  </view>
+  <view wx:else>
+    <block wx:for="{{dataList}}" wx:key="index">
+      <view class="item-container" bindtap="goOrderDetail" data-id="{{item.id}}">
+        <view class="item-hor-first">
+          <view class="item-name">周润发</view>
+          <view class="item-status">代加工</view>
+        </view>
+        <view class="item-hor-second">
+          <view class="item-no">NO.800000000000</view>
+          <view class="item-price">99999元</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

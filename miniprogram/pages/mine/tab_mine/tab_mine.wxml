@@ -1,0 +1,14 @@
+<!--miniprogram/pages/mine/tab_mine/tab_mine.wxml-->
+<!--我-->
+<view class="container">
+    <view class="item-container">
+        <view class="item-left">
+            <view class="item-name">周润发</view>
+            <view class="item-desc">好服务，即好产品</view>
+        </view>
+        <view class="item-right">
+            <image class="item-pic" mode="aspectFill" src="https://www.dianzhang.pro/profile/upload/2020/11/19/5fbe1e31afdd0c758df22db3d8501218.jpeg"></image>
+        </view>
+    </view>
+</view>
+

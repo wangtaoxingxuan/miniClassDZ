@@ -1,0 +1,32 @@
+/* miniprogram/pages/order/remark/orderRemark.wxss */
+
+.top-tip {
+  margin: 20rpx 32rpx 0 32rpx;
+  font-size: 28rpx;
+  color: #6e6e6e;
+}
+
+.remark-container{
+  display: flex;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 8rpx;
+  margin: 20rpx 32rpx 0 32rpx;
+  font-size: 32rpx;
+}
+
+textarea {
+  width: 1000rpx;
+  padding: 40rpx 32rpx;
+}
+
+.remark-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 8rpx;
+  margin: 32rpx;
+  height: 280rpx;
+}

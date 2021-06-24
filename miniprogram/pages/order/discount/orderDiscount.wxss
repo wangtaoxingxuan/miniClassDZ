@@ -1,0 +1,73 @@
+/* miniprogram/pages/order/discount/orderDiscount.wxss */
+.top-tip {
+  margin: 20rpx 32rpx 0 32rpx;
+  font-size: 28rpx;
+  color: #6e6e6e;
+}
+
+.radio-group-container {
+  display: flex;
+  justify-content: row;
+  margin: 20rpx 32rpx 0rpx 32rpx;
+}
+
+.radio-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  border-radius: 8rpx;
+  height: 112rpx
+}
+
+.radio-container-hor{
+  margin-left: 20rpx;
+}
+
+radio .wx-radio-input {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+}
+
+radio .wx-radio-input.wx-radio-input-checked {
+   /* 背景颜色 */
+  background-color: #fafafa!important; 
+  /* 边框颜色 */
+  border-color: #3B7AFF!important;
+}
+ 
+/* 选中后的实心样式*/
+radio .wx-radio-input.wx-radio-input-checked::before {
+ /* 将对号去掉 */
+ content: ''; 
+ /*实心圆圈的大小*/
+ width: 18rpx;
+ height: 18rpx;
+ /*将圆角设置成50%才是一个圆*/
+ border-radius: 50%;
+ /*圆圈颜色*/
+ background-color: #3B7AFF;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 32rpx 32rpx;
+  margin: 32rpx 32rpx 0 32rpx;
+  background-color: #fafafa;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  color: #070707;
+}
+
+.item-input {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20rpx;
+  text-align:right
+}

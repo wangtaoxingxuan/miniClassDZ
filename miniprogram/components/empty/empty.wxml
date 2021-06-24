@@ -1,0 +1,7 @@
+<!--components/empty/empty.wxml-->
+<view class='empty-container'>
+  <view class='empty-content'>
+    <image class="empty-img" src='{{imagePath}}' mode='widthFix'></image>
+    <view class="empty-txt">{{txt}}</view>
+  </view>
+</view>

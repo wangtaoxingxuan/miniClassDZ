@@ -1,0 +1,22 @@
+<!--miniprogram/pages/order/remark/orderRemark.wxml-->
+<!--订单备注-->
+<view class="container">
+  <view class="top-tip">可以用文字或图片备注客户的要求和喜好</view>
+
+  <!-- 备注 -->
+  <view class="remark-container">
+    <textarea type="text" confirm-type="done" placeholder="输入文字备注" placeholder-style="color:#e6e6e6" auto-height />
+  </view>
+
+  <!-- 图片 -->
+  <view class="remark-image" wx:if="{{pictureSrc != ''}}">
+    <view>
+      <image src="{{pictureSrc}}" mode="aspectFit" bindtap="photoPreview"></image>
+    </view>
+  </view>
+  <view wx:else bindtap="showActionsheet" class="remark-text">添加图片</view>
+
+
+  <mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}">
+  </mp-actionSheet>
+</view>

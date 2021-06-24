@@ -1,0 +1,91 @@
+<!--miniprogram/pages/order/sure/sureOrder.wxml-->
+<!--确认订单-->
+<view class="container">
+  <view class="top-tip">仔细核对订单信息并提交</view>
+  <!--地址-->
+  <view class="address-container">
+    <view class="address-method">
+      <view>收货方式</view>
+      <view class="address-method-select">
+        <view>快递寄送</view>
+        <image class="more-icon" src="/images/iv_item_more.png"></image>
+      </view>
+    </view>
+    <view class="address-name-phone">
+      <view class="address-name">王青丹</view>
+      <view class="address-phone">18888888888</view>
+    </view>
+    <view class="address-address">浙江省杭州市拱墅区保利香槟国际8-888册字数8-888册字</view>
+  </view>
+
+  <!--商品-->
+  <view class="goods-container" wx:if="{{goods.length > 0}}">
+    <block wx:for="{{goods}}" wx:key="{{index}}">
+      <view class="goods-item">
+        <view class="goods-item-name">{{item.sname}}</view>
+        <view class="goods-item-number">色号：{{item.number}}</view>
+        <view class="goods-item-price-num">
+          <view class="goods-item-price">价格：¥{{item.price}}</view>
+          <view class="goods-item-num">x{{item.num}}</view>
+        </view>
+      </view>
+    </block>
+    <view class="divider"></view>
+    <!-- 优惠/改价 -->
+    <view class="discount-container">
+      <view class="discount-left">优惠/改价</view>
+      <view class="discount-right">
+        <view class="discount-money"></view>
+        <image class="more-icon" src="/images/iv_item_more.png"></image>
+      </view>
+    </view>
+    <view class="divider"></view>
+    <view class="total-container">
+      <view class="total-num">共2件</view>
+      <view class="total-tip">小计：</view>
+      <view class="total-price">¥6,676,666</view>
+    </view>
+  </view>
+
+  <!-- 定金 -->
+  <view class="item-fmoney-container">
+    <view>定金</view>
+    <view class="item-fmoney">
+      <input type="digit" confirm-type="done" class="item-input" placeholder="0.00"
+        placeholder-style="color:#e6e6e6" />
+      <view>元</view>
+    </view>
+  </view>
+
+  <!-- 预计时间 -->
+  <view class="item-time-container">
+    <view>预计时间</view>
+    <view class="item-time-select">
+      <picker bindchange="bindTimePickerChange" value="{{index}}" range="{{timeArray}}">
+        <view class="time-picker">{{timeArray[index]}}</view>
+      </picker>
+      <image class="more-icon" src="/images/iv_item_more.png"></image>
+    </view>
+  </view>
+
+  <!-- 订单备注 -->
+  <view class="item-remark-container">
+    <view>订单备注</view>
+    <image class="more-icon-right" src="/images/iv_item_more.png"></image>
+  </view>
+
+  <!-- 选择支付方式 -->
+  <view class="item-pay-method-container" bindtap="showPayMethodActionsheet">
+    <view>选择支付方式</view>
+    <view class="item-pay-method-select">
+      <view class="item-pay-method">{{groups[groupIndex].text}}</view>
+      <image class="more-icon" src="/images/iv_item_more.png"></image>
+    </view>
+  </view>
+
+  <view class="commit-order">提交订单</view>
+
+  <!-- 选择支付方式弹窗 -->
+  <mp-actionSheet bindactiontap="payMethodClick" show="{{showActionsheet}}" actions="{{groups}}" title="选择支付方式">
+  </mp-actionSheet>
+</view>

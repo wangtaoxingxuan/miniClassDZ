@@ -1,0 +1,93 @@
+<!--miniprogram/pages/order/create/createOrder.wxml-->
+<!--创建订单-->
+<view class="container">
+  <view class="top-tip">准确的客户信息能帮助你更好了解客户。</view>
+  <!-- 姓名 -->
+  <view class="item-container">
+    <view>姓名</view>
+    <input type="text" confirm-type="done" class="item-input" placeholder="输入用户姓名" placeholder-style="color:#e6e6e6" />
+  </view>
+  <!-- 性别 -->
+  <radio-group name="radio" class="radio-group-container">
+    <label class="radio-sex">
+      <radio value="{{receiveMethod[1]}}" />男
+    </label>
+    <label class="radio-sex radio-sex-hor">
+      <radio value="{{receiveMethod[2]}}" />女
+    </label>
+  </radio-group>
+  <!-- 手机号 -->
+  <view class="item-container">
+    <view>手机号</view>
+    <input type="number" confirm-type="done" class="item-input" placeholder="输入11位手机号" placeholder-style="color:#e6e6e6"
+      maxlength="11" />
+  </view>
+  <!-- 客户来源 -->
+  <view class="item-container" bindtap="showSourceActionsheet">
+    <view>客户来源</view>
+    <view class="item-source-select">
+      <view class="item-source">{{soruceArr[sourceIndex].text}}</view>
+      <image class="more-icon" src="/images/iv_item_more.png"></image>
+    </view>
+  </view>
+  <!-- 视力报告 -->
+  <view class="tab-container">
+    <view class="th-container">
+      <view class="table-left table-common">视力报告</view>
+      <view class="table-center table-common">R</view>
+      <view class="table-right table-common">L</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">用途</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.usep,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.usep,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">球镜D</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.qiuD,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.qiuD,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">柱镜D</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.zhuD,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.zhuD,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">轴位°</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.zhouwei,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.zhouwei,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">裸眼视力</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.luoY,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.luoY,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">矫正视力</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.eyesight,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.eyesight,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">下加光D</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.xiaD,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.xiaD,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">瞳距mm</view>
+      <view class="table-right table-common2">{{eyeFilter.filter2(eye.tongju)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">瞳高mm</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.tonggao,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.tonggao,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">备注</view>
+      <view class="table-right table-common2">{{eyeFilter.filter2(eye.tips)}}</view>
+    </view>
+  </view>
+
+
+  <mp-actionSheet bindactiontap="sourceItemClick" show="{{showSource}}" actions="{{soruceArr}}">
+  </mp-actionSheet>
+</view>

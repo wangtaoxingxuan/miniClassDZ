@@ -1,0 +1,44 @@
+/* miniprogram/pages/mine/tab_mine/tab_mine.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0rpx 32rpx;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 16rpx;
+  background-color: #ffffff;
+  padding: 40rpx 32rpx;
+}
+
+.item-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-name {
+  font-size: 40rpx;
+  color: #070707;
+}
+
+.item-desc {
+  font-size: 28rpx;
+  color: #6E6E6E;
+  margin-top: 30rpx;
+}
+
+.item-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.item-pic {
+  width: 120rpx;
+  height:120rpx;
+  border-radius: 120rpx;
+}

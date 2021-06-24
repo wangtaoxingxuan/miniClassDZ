@@ -1,0 +1,59 @@
+/* miniprogram/pages/order/tab_order/tab_order.wxss */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0rpx 32rpx;
+}
+
+.empty-container {
+  width: 100%;
+  margin-top: 400rpx;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  padding: 32rpx;
+  border-radius: 16rpx;
+  background-color: #ffffff;
+  margin: 0rpx 0rpx 20rpx 0rpx;
+}
+
+.item-hor-first {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item-name {
+  font-size: 32rpx;
+  color: #070707;
+}
+
+.item-status {
+  font-size: 28rpx;
+  color: #1D54FE;
+  border-radius: 8rpx;
+  border-color: #1D54FE;
+  border-style: solid;
+  border-width: 1px;
+  padding: 0 8rpx 0 8rpx;
+}
+
+.item-hor-second {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.item-no {
+  font-size: 28rpx;
+  color: #6e6e6e;
+}
+
+.item-price {
+  font-size: 28rpx;
+  color: #6e6e6e;
+}

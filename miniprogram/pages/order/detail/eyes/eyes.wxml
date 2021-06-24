@@ -1,0 +1,65 @@
+<!--miniprogram/pages/order/detail/eyes/eyes.wxml-->
+<!--订单详情-视力报告-->
+<view class="container">
+  <view class="top-container">
+    <view class="item-name">陈浩</view>
+    <view class="item-time">最近更新时间2020年12月13日</view>
+  </view>
+  <view class="tab-container">
+    <view class="th-container">
+      <view class="table-left table-common">视力报告</view>
+      <view class="table-center table-common">R</view>
+      <view class="table-right table-common">L</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">用途</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.usep,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.usep,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">球镜D</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.qiuD,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.qiuD,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">柱镜D</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.zhuD,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.zhuD,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">轴位°</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.zhouwei,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.zhouwei,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">裸眼视力</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.luoY,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.luoY,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">矫正视力</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.eyesight,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.eyesight,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">下加光D</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.xiaD,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.xiaD,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">瞳距mm</view>
+      <view class="table-right table-common2">{{eyeFilter.filter2(eye.tongju)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">瞳高mm</view>
+      <view class="table-center table-common">{{eyeFilter.filter(eye.tonggao,0)}}</view>
+      <view class="table-right table-common">{{eyeFilter.filter(eye.tonggao,1)}}</view>
+    </view>
+    <view class="th-container">
+      <view class="table-left table-common">备注</view>
+      <view class="table-right table-common2">{{eyeFilter.filter2(eye.tips)}}</view>
+    </view>
+  </view>
+
+  <view class="item-empty"></view>
+</view>

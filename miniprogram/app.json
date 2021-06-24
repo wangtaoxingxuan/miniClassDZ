@@ -1,0 +1,47 @@
+{
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  },
+  "pages": [
+    "pages/order/tab_order/tab_order",
+    "pages/mine/tab_mine/tab_mine",
+    "pages/order/detail/orderDetail",
+    "pages/order/detail/balance/balance",
+    "pages/order/detail/eyes/eyes",
+    "pages/order/create/createOrder",
+    "pages/order/sure/sureOrder",
+    "pages/order/receive/receiveMethod",
+    "pages/order/remark/orderRemark",
+    "pages/order/discount/orderDiscount",
+    "pages/order/product/produceSelect"
+  ],
+  "window": {
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#efefef",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#A8A8B2",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/order/tab_order/tab_order",
+        "text": "订单",
+        "iconPath": "images/tab_order_normal.png",
+        "selectedIconPath": "images/tab_order_select.png"
+      },
+      {
+        "pagePath": "pages/mine/tab_mine/tab_mine",
+        "text": "我",
+        "iconPath": "images/tab_mine_normal.png",
+        "selectedIconPath": "images/tab_mine_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

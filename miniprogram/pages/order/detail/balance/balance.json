@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "结清尾款",
+  "usingComponents": {
+    "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
+  }
+}

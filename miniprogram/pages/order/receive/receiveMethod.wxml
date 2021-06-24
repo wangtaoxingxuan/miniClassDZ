@@ -1,0 +1,42 @@
+<!--miniprogram/pages/order/receive/receiveMethod.wxml-->
+<!--选择收货方式-->
+<view class="container">
+  <view class="top-tip">客户希望用什么方式收到商品？</view>
+  <radio-group name="radio" class="radio-group-container">
+    <label class="radio-container">
+      <radio value="{{receiveMethod[1]}}" />门店自提
+    </label>
+    <label class="radio-container radio-container-hor">
+      <radio value="{{receiveMethod[2]}}" />快递寄送
+    </label>
+  </radio-group>
+
+  <!-- 收货人 -->
+  <view class="item-container">
+    <view>收货人</view>
+    <input type="text" confirm-type="done" class="item-input" placeholder="输入收货人姓名" placeholder-style="color:#e6e6e6" />
+  </view>
+
+  <!-- 手机号 -->
+  <view class="item-container">
+    <view>手机号</view>
+    <input type="number" confirm-type="done" class="item-input" placeholder="输入11位手机号码"
+      placeholder-style="color:#e6e6e6" />
+  </view>
+
+  <!-- 地区 -->
+  <view class="item-container">
+    <view class="area-tip">地区</view>
+    <view class="item-area-more">
+      <view class="item-area-content">客比较着急需要及时送出及时送出及时送出及时送出及时送出</view>
+      <image class="more-icon" src="/images/iv_item_more.png"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 详细地址 -->
+<view class="item-container">
+  <view class="address-tip">详细地址</view>
+  <textarea class="textarea-input" type="text" confirm-type="done"  placeholder="如街道、门牌号、小区等"
+    placeholder-style="color:#e6e6e6" auto-height />
+</view>

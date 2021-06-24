@@ -1,0 +1,27 @@
+<!--miniprogram/pages/order/discount/orderDiscount.wxml-->
+<!-- 优惠/改价 -->
+<view class="container">
+  <view class="top-tip">你可以直接输入优惠金额或者改价</view>
+  <radio-group name="radio" class="radio-group-container">
+    <label class="radio-container">
+      <radio value="{{method[0]}}" checked/>改价
+    </label>
+    <label class="radio-container radio-container-hor">
+      <radio value="{{method[1]}}"/>优惠
+    </label>
+  </radio-group>
+
+  <!-- 小计 -->
+  <view class="item-container">
+    <view>小计</view>
+    <input type="digit" confirm-type="done" class="item-input" focus placeholder="0.00"
+        placeholder-style="color:#e6e6e6" />
+  </view>
+
+  <!-- 优惠金 -->
+  <view class="item-container">
+    <view>优惠金</view>
+    <input type="digit" confirm-type="done" class="item-input" focus placeholder="0.00"
+        placeholder-style="color:#e6e6e6" />
+  </view>
+</view>

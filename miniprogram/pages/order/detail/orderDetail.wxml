@@ -1,0 +1,126 @@
+<!--pages/order/detail/detail.wxml-->
+<!--订单详情页-->
+<view class="container">
+	<empty-view txt="{{noDataDes}}" wx:if="{{noData}}" empty-container="empty-container"></empty-view>
+	<view wx:else>
+		<!--订单状态-->
+		<view wx:if="{{orderDetail.order.step == 1}}" class="order-step">待加工</view>
+		<view wx:elif="{{orderDetail.order.step == 2}}" class="order-step">加工完成/待签收</view>
+		<view wx:else="{{orderDetail.order.step == 3}}" class="order-step">已签收</view>
+		<!--用户和收件信息-->
+		<view class="order-address-info" wx:if="{{orderDetail.address}}">
+			<view>{{orderDetail.address.sname}} {{orderDetail.address.sphone}} {{orderDetail.address.scity}}
+				{{orderDetail.address.saddress}}</view>
+		</view>
+		<!--商品-->
+		<view class="goods-container" wx:if="{{orderDetail.goods.length > 0}}">
+			<block wx:for="{{orderDetail.goods}}" wx:key="{{index}}">
+				<view class="goods-item">
+					<view class="goods-item-name">{{item.sname}}</view>
+					<view class="goods-item-number">色号：{{item.number}}</view>
+					<view class="goods-item-price-num">
+						<view class="goods-item-price">价格：¥{{item.price}}</view>
+						<view class="goods-item-num">x{{item.num}}</view>
+					</view>
+				</view>
+			</block>
+			<!--优惠-->
+			<view class="item-money" wx:if="{{orderDetail.order.discount > 0 || orderDetail.order.fDiscount > 0}}">
+				<view class="item-money-left">优惠</view>
+				<view class="item-money-right2">¥{{orderDetail.order.discount + orderDetail.order.fDiscount}}</view>
+			</view>
+			<!--小计-->
+			<view class="item-money">
+				<view class="item-money-left">小计</view>
+				<view class="item-money-right">
+					¥{{orderDetail.order.totalmoney - orderDetail.order.discount - orderDetail.order.fDiscount}}</view>
+			</view>
+			<!--定金-->
+			<view class="item-money">
+				<view class="item-money-left">定金</view>
+				<view class="item-money-right">¥{{orderDetail.order.fmoney}}</view>
+			</view>
+			<!--代付款-->
+			<view class="item-money"
+				wx:if="{{orderDetail.order.discount + orderDetail.order.fDiscount + orderDetail.order.fmoney + orderDetail.order.ilmoney > orderDetail.order.totalmoney}}">
+				<view class="item-money-left">实收尾款</view>
+				<view class="item-money-right2">¥{{orderDetail.order.ilmoney}}</view>
+			</view>
+			<!--尾款-->
+			<view class="item-balance-container" wx:else>
+				<view class="item-money">
+					<view class="item-money-left">待付尾款</view>
+					<view class="item-money-right2">¥{{orderDetail.order.ilmoney}}</view>
+				</view>
+				<view class="item-balance" bindtap="go2Balance">尾款结清</view>
+			</view>
+		</view>
+		<!--视力报告和订单备注-->
+		<view class="item-eye-remark">
+			<!--视力报告-->
+			<view class="item-eye" bindtap="go2Eye">
+				<view>视力报告</view>
+				<view class="item-eye-more">
+					<view class="item-eye-time">2019年12月12日</view>
+					<image class="more-icon" src="/images/iv_item_more.png"></image>
+				</view>
+
+			</view>
+			<!--订单备注-->
+			<view class="item-remark" bindtap="goRemark">
+				<view class="item-remark-tip">订单备注</view>
+				<view class="item-remark-more">
+					<view class="item-remark-content">客比较着急需要及时送出及时送出及时送出及时送出及时送出</view>
+					<image class="more-icon" src="/images/iv_item_more.png"></image>
+				</view>
+			</view>
+		</view>
+
+		<view class="more-info-container">
+			<!--订单编号-->
+			<view class="order-des">
+				<view>订单编号</view>
+				<view class="order-des-right">{{orderDetail.order.orderno}}</view>
+			</view>
+			<!--订单编号-->
+			<view class="order-des">
+				<view>销售顾问</view>
+				<view class="order-des-right">{{orderDetail.order.adviser}}</view>
+			</view>
+			<!--创建时间-->
+			<view class="order-des">
+				<view>创建时间</view>
+				<view class="order-des-right">{{orderDetail.order.crtDate}}</view>
+			</view>
+			<!--成交时间-->
+			<view class="order-des">
+				<view>成交时间</view>
+				<view class="order-des-right">{{orderDetail.order.gmtDate}}</view>
+			</view>
+			<!--付款方式-->
+			<view class="pay-way-container">
+				<view>支付方式</view>
+				<view wx:if="{{orderDetail.order.way == 1}}" class="pay-way">现金</view>
+				<view wx:elif="{{rderDetail.order.way == 2}}" class="pay-way">支付宝</view>
+				<view wx:elif="{{rderDetail.order.way == 3}}" class="pay-way">微信</view>
+				<view wx:elif="{{rderDetail.order.way == 4}}" class="pay-way">POS</view>
+				<view wx:elif="{{rderDetail.order.way == 5}}" class="pay-way">会员卡</view>
+				<view wx:else class="pay-way">现金</view>
+			</view>
+			<!--是否满意-->
+			<view class="order-des2" wx:if="{{orderDetail.order.step == 3}}">
+				<view>是否满意</view>
+				<view class="order-des-right2" wx:if="{{orderDetail.order.evaluate == 1}}">满意</view>
+				<view class="order-des-right2" wx:elif="{{orderDetail.order.evaluate == 2}}">不满意</view>
+				<view class="order-des-right2" wx:else>未评价</view>
+			</view>
+		</view>
+
+		<!--滑动推上去的空白-->
+		<view class="item-flil-empey"></view>
+	</view>
+
+	<view class="comment-btn" bindtap="showCommitServiceDialog"
+		wx:if="{{orderDetail.order.evaluate == 0 && orderDetail.order.step == 3}}">对本次服务评价</view>
+
+</view>

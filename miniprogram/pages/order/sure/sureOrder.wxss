@@ -1,0 +1,280 @@
+/* miniprogram/pages/order/sure/sureOrder.wxss */
+
+.container {
+
+}
+
+.top-tip {
+  margin: 20rpx 32rpx;
+}
+
+.address-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  border-radius: 8rpx;
+  margin: 0 32rpx;
+  padding: 32rpx 40rpx;
+}
+
+.address-method {
+  display: flex;
+  flex-direction: row;
+  font-size: 32rpx;
+  color: #070707;
+}
+
+.address-method-select {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.more-icon{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 20rpx;
+}
+
+.more-icon-right {
+  margin-left: auto;
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.address-name-phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 32rpx;
+}
+
+.address-name {
+  font-size: 32rpx;
+  color: #070707;
+}
+
+.address-phone {
+  font-size: 28rpx;
+  color: #6e6e6e;
+  margin-left: 20rpx;
+}
+
+.address-address {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #070707;
+}
+
+.goods-container {
+  border-radius: 8rpx;
+  background-color: #FAFAFA;
+  margin: 32rpx;
+  padding: 40rpx 32rpx;
+}
+
+.goods-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+}
+
+.goods-item-name {
+  display: flex;
+  font-size: 32rpx;
+  color: #070707;
+
+  /* 超出3行...结尾 */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.goods-item-number {
+  display: flex;
+  font-size: 32rpx;
+  color: #6E6E6E;
+  margin: 20rpx 0rpx 0rpx 0rpx;
+
+  /* 超出3行...结尾 */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.goods-item-price-num {
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx 0rpx 50rpx 0rpx;
+  font-size: 32rpx;
+  color: #000;
+}
+
+.goods-item-price {
+  color: #6E6E6E;
+}
+
+.goods-item-num {
+  margin-left: auto;
+  color: #070707;
+}
+
+.divider{
+  width: calc(100%-64rpx);
+  height: 2rpx;
+  border: none;
+  border-bottom: 2rpx solid #efefef;
+}
+
+.discount-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 110rpx;
+}
+
+.discount-left {
+  font-size: 32rpx;
+  color: #070707;
+}
+
+.discount-right{
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.discount-money {
+  font-size: 32rpx;
+  color: #6e6e6e;
+}
+
+.total-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 38rpx;
+}
+
+.total-num {
+  font-size: 28rpx;
+  color: #6e6e6e;
+}
+
+.total-tip {
+  font-size: 32rpx;
+  color: #070707;
+  margin-left: 8rpx;
+}
+
+.total-price {
+  font-size: 32rpx;
+  color: #FF2741;
+}
+
+.item-fmoney-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 32rpx 32rpx;
+  margin: 0 32rpx 32rpx 32rpx;
+  background-color: #fafafa;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  color: #070707;
+}
+
+.item-fmoney {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item-input {
+  margin-right: 20rpx;
+  text-align: right
+}
+
+.item-time-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 32rpx 32rpx 32rpx;
+  padding: 32rpx;
+  background-color: #fafafa;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  color: #070707;
+}
+
+.item-time-select {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.time-picker{
+  color: #070707;
+  font-size: 32rpx;
+}
+
+.item-remark-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 32rpx 32rpx 32rpx;
+  padding: 32rpx;
+  background-color: #fafafa;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  color: #070707;
+}
+
+.item-pay-method-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 32rpx 32rpx 32rpx;
+  padding: 32rpx;
+  background-color: #fafafa;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: #070707;
+}
+
+.item-pay-method-select {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.commit-order {
+  width: 204rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 50rpx;
+  background-color: #1D54FE;
+  text-align: center;
+  color: #fafafa;
+  font-size: 32rpx;
+
+  z-index: 10;
+  position: fixed;
+  bottom: 44rpx;
+  right: 32rpx;
+}
