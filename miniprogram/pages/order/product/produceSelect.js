@@ -5,7 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    currentIndex: 0, //左边菜单的当前显示值
+    toView: 'menu-0', //滚动到某个菜单元素
+    foodListHeights: [], //菜单对应右边商品的元素高度列表
+    scrollTop: 0, //右边商品滚动条滚动到哪
+    goods: [{
+      "name": "热销榜",
+      "type": -1,
+      "foods": [{
+        "name": "皮蛋瘦肉粥",
+        "price": 10,
+        "oldPrice": "",
+        "description": "咸粥"
+      }]
+    }]
   },
 
   /**

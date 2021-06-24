@@ -1,2 +1,17 @@
 <!--miniprogram/pages/order/product/produceSelect.wxml-->
-<text>miniprogram/pages/order/product/produceSelect.wxml</text>
+<view class="container">
+<!-- 左侧 -->
+<view class="left-container">
+<scroll-view scroll-y="true" scroll-with-animation="true" enable-back-to-top="true">
+<block wx:for="{{leftMenuData}}" wx:key="{{index}}">
+<view class="left-menu-item" bindtap="lefeMenuItemTap">
+</view>
+</block>
+</scroll-view>
+</view>
+<!-- 右侧 -->
+<view class="right-container">
+<scroll-view scroll-y="true" scroll-with-animation="true" enable-back-to-top="true">
+</scroll-view>
+</view>
+</view>
